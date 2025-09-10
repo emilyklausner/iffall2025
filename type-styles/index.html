@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Type Styling Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Crimson Text', serif;
+      margin: 0;
+      padding: 40px;
+      line-height: 1.9;
+      background: linear-gradient(135deg, #ffeaf4, #eaf6ff, #f9ffe5);
+      color: #333;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      background: #fffdfd;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border: 2px solid #f2d9ec;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #6b3e8a;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ffd6e0;
+      padding-bottom: 6px;
+      color: #4b4b6b;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .summary {
+      background: #fdf8ff;
+      border: 2px solid #e0cfff;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .summary strong {
+      color: #6b3e8a;
+    }
+
+    .property-group {
+      margin-bottom: 35px;
+    }
+
+    .sample {
+      margin-left: 10px;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #6b3e8a;
+      display: inline-block;
+      min-width: 160px;
+      font-variant: small-caps;
+    }
+
+    .sample-line {
+      margin-bottom: 12px;
+      padding: 10px 16px;
+      background: #fefeff;
+      border-left: 5px solid #b3e6ff;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .sample-line:hover {
+      background: #f9f0ff;
+      transform: scale(1.02);
+    }
+
+    /* Drop cap flourish */
+    .sample-line span.sample::first-letter {
+      font-size: 130%;
+      font-weight: 700;
+      color: #ff82a9;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="summary">
+      <h1>Font Demo Summary</h1>
+      <p><strong>Typeface:</strong> Crimson Text</p>
+      <p><strong>Base Font Size:</strong> 18px</p>
+    </div>
+
+    <!-- Font Weight -->
+    <div class="property-group">
+      <h2>Font Weight</h2>
+      <div class="sample-line"><span class="label">400 (Regular):</span> <span class="sample" style="font-weight: 400;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">600 (Semi-bold):</span> <span class="sample" style="font-weight: 600;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">700 (Bold):</span> <span class="sample" style="font-weight: 700;">Hello, my name is Emily.</span></div>
+    </div>
+
+    <!-- Font Style -->
+    <div class="property-group">
+      <h2>Font Style</h2>
+      <div class="sample-line"><span class="label">Normal:</span> <span class="sample" style="font-style: normal;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Italic:</span> <span class="sample" style="font-style: italic;">Hello, my name is Emily.</span></div>
+    </div>
+
+    <!-- Letter Spacing -->
+    <div class="property-group">
+      <h2>Letter Spacing</h2>
+      <div class="sample-line"><span class="label">Normal:</span> <span class="sample" style="letter-spacing: normal;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">2px:</span> <span class="sample" style="letter-spacing: 2px;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">4px:</span> <span class="sample" style="letter-spacing: 4px;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">-1px:</span> <span class="sample" style="letter-spacing: -1px;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">0.5em:</span> <span class="sample" style="letter-spacing: 0.5em;">Hello, my name is Emily.</span></div>
+    </div>
+
+    <!-- Text Transform -->
+    <div class="property-group">
+      <h2>Text Transform</h2>
+      <div class="sample-line"><span class="label">None:</span> <span class="sample" style="text-transform: none;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Uppercase:</span> <span class="sample" style="text-transform: uppercase;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Lowercase:</span> <span class="sample" style="text-transform: lowercase;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Capitalize:</span> <span class="sample" style="text-transform: capitalize;">Hello, my name is Emily.</span></div>
+    </div>
+
+    <!-- Text Decoration -->
+    <div class="property-group">
+      <h2>Text Decoration</h2>
+      <div class="sample-line"><span class="label">None:</span> <span class="sample" style="text-decoration: none;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Underline:</span> <span class="sample" style="text-decoration: underline;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Overline:</span> <span class="sample" style="text-decoration: overline;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Line-through:</span> <span class="sample" style="text-decoration: line-through;">Hello, my name is Emily.</span></div>
+      <div class="sample-line"><span class="label">Underline Overline:</span> <span class="sample" style="text-decoration: underline overline;">Hello, my name is Emily.</span></div>
+    </div>
+  </div>
+</body>
+</html>
