@@ -1,0 +1,140 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    line-height: 1.3;
+  }
+  
+  body {
+    width: 800px;
+    max-width: 90%;
+    margin: 5rem auto;
+  }
+  
+  article {
+    margin: 5rem 0;
+  }
+  
+  section {
+    margin: 3rem 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+  
+  article > h1 {
+    font-weight: bold;
+  }
+  
+  samp {
+    display: block;
+    margin: 1em 0;
+  }
+  
+  code, kbd {
+    color: steelblue;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  code.tag::before {
+    content: "<";
+  }
+  
+  code.tag::after {
+    content: ">";
+  }
+  
+  ol.instructions {
+    background-color: #f2f2f2;
+    padding: 1rem 1rem 1rem 2rem;
+    color: #666666;
+    font-style: italic;
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+  
+  ol.instructions > li {
+    margin: 0.4rem 0;
+  }
+  
+  ol.instructions > li:first-child { margin-top: 0; }
+  ol.instructions > li:last-child { margin-bottom: 0; }
+  
+  aside {
+    padding: 1rem 2rem;
+    color: white;
+    background-color: gray;
+    font-size: 0.8rem;
+    margin: 1em 0;
+  }
+  
+  .overflow-example {
+    padding: 1rem;
+    border: 1px solid gray;
+  }
+  
+  .portrait {
+    width: 125px;
+  }
+  
+  .positioned-element {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+  }
+  
+  .static-example,
+  .relative-example,
+  .absolute-example,
+  .fixed-example,
+  .sticky-example {
+    border: 1px solid #999;
+    padding: 0 1rem;
+  }
+
+  .portrait {
+    float: left;
+    /* Instruction 3: Set margin with 2rem breathing room to right and bottom, 0 top and left */
+    margin: 0 2rem 2rem 0;
+  }
+  
+  /* Instruction from later in the document: Make .instructions clear floated items */
+  .instructions {
+    clear: both;
+  }
+  
+  /* Additional basic styling for better presentation */
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  .tag {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+  
+  code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+  
+  dfn {
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .instructions {
+    background-color: #e8f4f8;
+    padding: 15px;
+    border-left: 4px solid #2196F3;
+    margin: 20px 0;
+  }
