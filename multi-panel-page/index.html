@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Panel — Optimized</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font: "Archivo Narrow", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --blue: #2779f5;
+            --navy: #123d80;
+            --teal: #13cdd6;
+            --paper: #f0e8dc;
+            --ink: #ffffff;
+            --ink2: #f5f5f5;
+            --maxw: 1200px;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: var(--font);
+            line-height: 1.7;
+            background: var(--paper);
+            color: #222;
+        }
+        
+        .panel {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: min(100% - 3rem, var(--maxw));
+            margin-inline: auto;
+            padding-block: clamp(2.5rem, 6vw, 4.5rem);
+        }
+        
+        .hero {
+            position: relative;
+            min-height: 60vh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #fff;
+            background: url('clouds1.jpg') center/cover no-repeat;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero .inner {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            margin: 0 0 0.4rem;
+            font-weight: 800;
+            font-size: clamp(3rem, 8vw, 5.1rem);
+            letter-spacing: -0.02em;
+        }
+        
+        .hero p {
+            margin: 0;
+            font-size: clamp(1.05rem, 2.8vw, 1.7rem);
+            opacity: 0.95;
+        }
+        
+        .blue {
+            background: var(--blue);
+            color: var(--ink);
+        }
+        
+        .section-title {
+            margin: 0 0 1.8rem;
+            font-weight: 800;
+            font-size: clamp(2.3rem, 4vw, 3.2rem);
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+        
+        .twocol {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        
+        .twocol p {
+            margin: 0 0 1.2rem;
+            color: var(--ink2);
+        }
+        
+        .figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .navy {
+            background: var(--navy);
+            color: #fff;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem 3rem;
+        }
+        
+        .card {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 1.2rem;
+            align-items: center;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .card h3 {
+            margin: 0.1rem 0 0.3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .card p {
+            margin: 0;
+            color: #e8e8e8;
+            line-height: 1.6;
+        }
+        
+        .teal {
+            background: var(--teal);
+            color: #1a1a1a;
+            text-align: center;
+        }
+        
+        .teal .section-title {
+            color: #111;
+        }
+        
+        .teal p {
+            max-width: 70ch;
+            margin: 0 auto;
+            font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+        }
+        
+        footer {
+            background: var(--navy);
+            color: #000;
+            padding: 1.2rem 1.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        @media (max-width: 980px) {
+            .twocol {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                grid-template-columns: 1fr;
+            }
+            
+            .card img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="panel hero">
+        <div class="inner">
+            <h1>Page Intro</h1>
+            <p>Subheading that <em>really</em> engages the user.</p>
+        </div>
+    </header>
+    
+    <section class="panel blue">
+        <div class="container">
+            <h2 class="section-title">Section Title</h2>
+            <div class="twocol">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod. Vivamus pulvinar posuere turpis congue laoreet. Suspendisse potenti. Sed fringilla, ex et dictum efficitur, augue nunc cursus elit, non lacinia diam ante et ipsum. Sed non commodo dolor. Sed vehicula aliquet nisl, sit amet convallis dolor posuere sed. Fusce consectetur quam diam, nec facilisis lectus congue non. Pellentesque sollicitudin mollis tempor. Vivamus mattis at quam a pretium. Aenean eget scelerisque mi, non rutrum felis. Maecenas facilisis imperdiet justo, ut sodales purus blandit vitae. Proin pellentesque laoreet lobortis. Sed feugiat ipsum eget lorem tempus commodo.</p>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur lobortis, nisi pretium hendrerit tincidunt, ante erat tempor purus, id condimentum purus dolor ac urna. Nullam imperdiet, ipsum vitae posuere euismod, justo elit auctor augue, at molestie est nulla ut lorem. Nam eu aliquam ipsum, a pretium enim. Nulla non consectetur tortor, ac placerat turpis. Nam lobortis libero sed varius pellentesque. In dapibus arcu ut mauris accumsan, in tincidunt risus eleifend. Cras ut nulla vel eros iaculis rutrum eget sed felis.</p>
+                    <p>Morbi et maximus ante, eu tincidunt ligula. Suspendisse elementum, leo quis sodales vehicula, velit enim hendrerit risus, vitae porttitor quam risus quis erat. Maecenas sed tellus et justo commodo tempor. Mauris augue nibh, varius nec faucibus sit amet, porttitor ut risus. Maecenas dapibus tellus felis, quis interdum magna lobortis at. Nam vel ornare turpis. Nulla facilisi. Morbi velit justo, vehicula vel tristique vitae, finibus sit amet eros. Quisque pellentesque erat quis enim vulputate posuere. Aliquam erat volutpat. Curabitur gravida mi at enim varius dignissim. Morbi vitae turpis ut ligula tincidunt varius eget ac lorem. Cras laoreet augue augue, non sodales libero elementum ultrices.</p>
+                </div>
+                <div class="figure">
+                    <img src="clouds2.jpg" alt="clouds">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="panel navy">
+        <div class="container">
+            <h2 class="section-title">Section Title</h2>
+            <div class="grid">
+                <article class="card">
+                    <img src="clouds3.jpg" alt="clouds">
+                    <div>
+                        <h3>Photo Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="clouds4.jpg" alt="clouds">
+                    <div>
+                        <h3>Photo Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="clouds5.jpg" alt="clouds">
+                    <div>
+                        <h3>Photo Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="clouds6.jpg" alt="clouds">
+                    <div>
+                        <h3>Photo Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="clouds7.jpg" alt="clouds">
+                    <div>
+                        <h3>Photo Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="clouds8.jpg" alt="clouds">
+                    <div>
+                        <h3>Photo Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <section class="panel teal">
+        <div class="container">
+            <h2 class="section-title">Section Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan vitae massa quis euismod. Vivamus pulvinar posuere turpis congue laoreet. Suspendisse potenti. Sed fringilla, ex et dictum efficitur, augue nunc cursus elit, non lacinia diam ante et ipsum. Sed non commodo dolor. Sed vehicula aliquet nisl, sit amet convallis dolor posuere sed.</p>
+        </div>
+    </section>
+    
+    <footer>© Copyright 2025</footer>
+</body>
+</html>
