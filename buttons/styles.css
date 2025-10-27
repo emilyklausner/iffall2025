@@ -1,0 +1,181 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #fff;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: left;
+  color: #000;
+  margin-bottom: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+/* Layout */
+.button-container {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.button i {
+  font-size: 64px;
+}
+
+/* Coca-Cola */
+.coca-cola-btn {
+  background: #F40009;
+  color: #fff;
+}
+.coca-cola-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(244, 0, 9, 0.4);
+}
+
+/* Apple */
+.apple-btn {
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+.apple-btn:hover {
+  transform: scale(1.08);
+  color: #06c;
+}
+
+/* Harley-Davidson */
+.harley-btn {
+  background: #FF6B00;
+  color: #000;
+}
+.harley-btn:hover {
+  background: #000;
+  color: #FF6B00;
+  transform: scale(1.08);
+}
+
+/* Nike */
+.nike-btn {
+  background: #fff;
+  color: #000;
+}
+.nike-btn:hover {
+  transform: scale(1.1);
+  color: #FF6B00;
+}
+
+/* Cartoon Network */
+.cartoon-btn {
+  background: #fff;
+  color: #000;
+  border: 3px solid #000;
+}
+.cartoon-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* The Color Run */
+.colorrun-btn {
+  background: linear-gradient(90deg, #FF0080, #FF8C00, #FFD700, #00FF00, #00CED1, #9400D3);
+  color: #fff;
+}
+.colorrun-btn:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+/* Instagram */
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+}
+.instagram-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 12px rgba(188, 24, 136, 0.5);
+}
+
+/* NPR */
+.npr-btn {
+  background: #fff;
+  color: #000;
+  border: 3px solid #000;
+}
+.npr-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Tesla */
+.tesla-btn {
+  background: #E82127;
+  color: #fff;
+}
+.tesla-btn:hover {
+  background: #fff;
+  color: #E82127;
+  border: 3px solid #E82127;
+  transform: scale(1.08);
+}
+
+/* Old Navy */
+.oldnavy-btn {
+  background: #002868;
+  color: #fff;
+  border: 3px solid #BF0A30;
+}
+.oldnavy-btn:hover {
+  background: #BF0A30;
+  border-color: #002868;
+  transform: scale(1.08);
+}
+
+/* Text */
+.btn-text {
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .button-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    width: 160px;
+    height: 160px;
+  }
+  .button i {
+    font-size: 48px;
+  }
+}
